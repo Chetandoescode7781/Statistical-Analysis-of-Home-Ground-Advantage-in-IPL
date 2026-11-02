@@ -1,0 +1,128 @@
+import pandas as pd
+import zipfile
+import os
+
+matches_df = pd.read_csv('ipl_ball_by_ball_2008_2026.csv')
+
+# RCB as your team (old and new names)
+my_team_names = [
+    "Royal Challengers Bangalore",
+    "Royal Challengers Bengaluru"
+]
+
+opponent_teams = [
+    "Chennai Super Kings",
+    "Kolkata Knight Riders",
+    "Mumbai Indians"
+]
+
+home_grounds = [
+    "Eden Gardens",
+    "Chinnaswamy",
+    "Chidambaram",
+    "Wankhede"
+]
+
+match_records = []
+
+for match_id, group in matches_df.groupby("match_id", sort=False):
+
+    teams = pd.unique(
+        group[["batting_team", "bowling_team"]].to_numpy().ravel()
+    )
+    teams = [team for team in teams if pd.notna(team)]
+
+    if len(teams) < 2:
+        continue
+
+    team1, team2 = teams[:2]
+
+    team_runs = group.groupby("batting_team")["total_runs"].sum()
+
+    team1_runs = int(team_runs.get(team1, 0))
+    team2_runs = int(team_runs.get(team2, 0))
+
+    if team1_runs > team2_runs:
+        winner = team1
+    elif team2_runs > team1_runs:
+        winner = team2
+    else:
+        winner = "Tie"
+
+    match_records.append({
+        "match_id": match_id,
+        "season": group["season"].iloc[0],
+        "date": group["date"].iloc[0],
+        "venue": group["venue"].iloc[0],
+        "team1": team1,
+        "team2": team2,
+        "team1_runs": team1_runs,
+        "team2_runs": team2_runs,
+        "winner": winner
+    })
+
+match_summary_df = pd.DataFrame(match_records)
+
+# Select RCB matches against the three opponents
+is_my_team_match = (
+    (
+        (match_summary_df["team1"].isin(my_team_names)) &
+        (match_summary_df["team2"].isin(opponent_teams))
+    ) |
+    (
+        (match_summary_df["team2"].isin(my_team_names)) &
+        (match_summary_df["team1"].isin(opponent_teams))
+    )
+)
+
+filtered_df = match_summary_df[is_my_team_match].copy()
+
+# Filter matches played at the selected grounds
+venue_pattern = "|".join(home_grounds)
+
+filtered_df = filtered_df[
+    filtered_df["venue"].str.contains(
+        venue_pattern, case=False, na=False
+    )
+]
+
+extracted_data = []
+
+for _, row in filtered_df.iterrows():
+
+    if row["team1"] in my_team_names:
+        runs = row["team1_runs"]
+    else:
+        runs = row["team2_runs"]
+
+    if row["winner"] in my_team_names:
+        win_loss = "Win"
+    elif pd.isna(row["winner"]) or row["winner"] == "Tie":
+        win_loss = "Tie/No Result"
+    else:
+        win_loss = "Loss"
+
+    # Chinnaswamy is RCB's home ground
+    is_home = "Chinnaswamy" in str(row["venue"])
+
+    extracted_data.append({
+        "team": "Royal Challengers Bengaluru",
+        "season": row["season"],
+        "date": row["date"],
+        "ground": row["venue"],
+        "opponent": (
+            row["team2"] if row["team1"] in my_team_names
+            else row["team1"]
+        ),
+        "runs": runs,
+        "win/loss": win_loss,
+        "is_home": is_home
+    })
+
+result_df = pd.DataFrame(extracted_data)
+
+print("Total matches:", len(result_df))
+print("\nMatches by ground:")
+print(result_df.groupby("ground").size())
+
+display(result_df)
