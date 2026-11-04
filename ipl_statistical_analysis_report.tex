@@ -1,8 +1,11 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage[a4paper, margin=2.5cm]{geometry}
-\usepackage{fontspec}
-\usepackage[english, bidi=basic, provide=*]{babel}
-\babelfont{rm}{Noto Sans}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[english]{babel}
+
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -22,7 +25,7 @@ This research project analyzes the performance of four prominent Indian Premier 
 
 \section{Methodology \& Mathematical Formulation}
 
-\subsection{1. Batting Strength Formulation}
+\subsection{Batting Strength Formulation}
 Batting strength is computed using normalized performance metrics mapped between $0$ and $1$. For higher-is-better metrics ($x_{\max}$ to $x_{\min}$):
 \begin{equation}
 N(x) = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
@@ -36,13 +39,13 @@ The final composite \textbf{Batting Strength} is calculated as:
 \text{BattingStrength} = 0.30 N(\text{Runs}) + 0.25 N(\text{SR}) + 0.15 N(\text{Boundary}) + 0.20 N(\text{Avg}) + 0.10 N(\text{DotBall})
 \end{equation}
 
-\subsection{2. Bowling Strength Formulation}
+\subsection{Bowling Strength Formulation}
 Similarly, bowling strength combines economy, wicket rate, dot-ball percentage, boundary conceded percentage, and average runs conceded:
 \begin{equation}
 \text{BowlingStrength} = 0.30 N(\text{Economy}) + 0.25 N(\text{WicketRate}) + 0.20 N(\text{DotBall}) + 0.15 N(\text{BoundaryConceded}) + 0.10 N(\text{AvgRunsConceded})
 \end{equation}
 
-\subsection{3. Calculating Match-by-Match Batting and Bowling Performance}
+\subsection{Calculating Match-by-Match Batting and Bowling Performance}
 To capture how each team performed in every individual match, we aggregated delivery-level data into innings-level statistics and benchmarked them against seasonal averages:
 \begin{itemize}[label=-]
     \item \textbf{Match Batting Performance ($Y_i$):} Calculated as a team's total innings score divided by the overall seasonal average IPL innings score ($\approx 177.16$ runs):
@@ -55,7 +58,7 @@ To capture how each team performed in every individual match, we aggregated deli
     \end{equation}
 \end{itemize}
 
-\subsection{4. Comparator Model Formulation}
+\subsection{Comparator Model Formulation}
 The regression comparator model combines team strengths, opponent strengths, and home-ground indicators:
 \begin{equation}
 Y_i = \beta_0 + \beta_1 H_i + \beta_2 BS_i + \beta_3 OBS_i + \epsilon_i
@@ -110,28 +113,14 @@ In LaTeX, figures and plots generated in Python are typically saved to disk (e.g
 
 \begin{figure}[htbp]
   \centering
-  % If you have an image file named ipl_batting_chart.png, uncomment the line below:
-   \includegraphics[width=0.8\textwidth]{Images/Battingcomp.png}
-  \framebox{\parbox{0.8\textwidth}{\centering
-    \vspace{1.5cm}
-    \textbf{IPL Batting Strength Bar Chart} \\
-    \small\textit{Comparative visualization of normalized batting strength scores for MI, RCB, CSK, and KKR (2022--2026).\\(To include an actual image file, place it in the same directory and use \textbackslash includegraphics).}
-    \vspace{1.5cm}
-  }}
+     \includegraphics[width=0.8\textwidth]{Images/Battingcomp.png}
   \caption{IPL Batting Strength Distribution}
   \label{fig:batting_strength}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  % If you have an image file named ipl_bowling_metrics.png, uncomment the line below:
    \includegraphics[width=0.8\textwidth]{Images/Bowlcomp.png}
-  \framebox{\parbox{0.8\textwidth}{\centering
-    \vspace{1.5cm}
-    \textbf{Normalized Bowling Metrics Comparison \& Heatmap} \\
-    \small\textit{Evaluates economy, wickets, bowling strike rate, dot percentage, and boundary percentage across teams.}
-    \vspace{1.5cm}
-  }}
   \caption{Bowling Metrics Comparison \& Heatmap}
   \label{fig:bowling_metrics}
 \end{figure}
