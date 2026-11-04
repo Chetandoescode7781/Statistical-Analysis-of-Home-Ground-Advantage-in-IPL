@@ -1,0 +1,38 @@
+season,team1,team2,winner,Team1Won,venue,HomeAdvantage,without_home_prob_team1_wins,without_home_prediction_team1_wins,with_home_prob_team1_wins,with_home_prediction_team1_wins
+2023.0,Mumbai Indians,Royal Challengers Bengaluru,Royal Challengers Bengaluru,0,"M Chinnaswamy Stadium, Bengaluru",-1,0.4856919779602586,0,0.3688850642016259,0
+2023.0,Kolkata Knight Riders,Royal Challengers Bengaluru,Kolkata Knight Riders,1,"Eden Gardens, Kolkata",1,0.5371422393863615,1,0.5848668532709896,1
+2023.0,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,0,"Wankhede Stadium, Mumbai",1,0.5236251504147328,1,0.5722321294805539,1
+2023.0,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.5689377296182981,1,0.4555591257769624,0
+2023.0,Chennai Super Kings,Royal Challengers Bengaluru,Chennai Super Kings,1,"M Chinnaswamy Stadium, Bengaluru",-1,0.47991302432659094,0,0.3629535991762572,0
+2023.0,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,1,"Eden Gardens, Kolkata",-1,0.46062998298691427,0,0.3452571664453258,0
+2023.0,Kolkata Knight Riders,Royal Challengers Bengaluru,Kolkata Knight Riders,1,"M Chinnaswamy Stadium, Bengaluru",-1,0.5371422393863615,1,0.4209376069930642,0
+2023.0,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,0,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.5236251504147328,1,0.40836065636885616,0
+2023.0,Royal Challengers Bengaluru,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.549859456513658,1,0.4364408772051596,0
+2023.0,Chennai Super Kings,Kolkata Knight Riders,Kolkata Knight Riders,0,"MA Chidambaram Stadium, Chepauk, Chennai",1,0.46062998298691427,0,0.5054391699477305,1
+2024.0,Royal Challengers Bengaluru,Chennai Super Kings,Chennai Super Kings,0,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.48941665222597547,0,0.37786384588670296,0
+2024.0,Royal Challengers Bengaluru,Kolkata Knight Riders,Kolkata Knight Riders,0,"M Chinnaswamy Stadium, Bengaluru",1,0.4600435330856835,0,0.5070871730942635,1
+2024.0,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,0,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.5471730951598911,1,0.4349762829047949,0
+2024.0,Royal Challengers Bengaluru,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.564126228481895,1,0.4486102659677336,0
+2024.0,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,1,"Wankhede Stadium, Mumbai",-1,0.5918679152860783,1,0.4740300297337223,0
+2024.0,Kolkata Knight Riders,Royal Challengers Bengaluru,Kolkata Knight Riders,1,"Eden Gardens, Kolkata",1,0.5751812347079291,1,0.6230345072929547,1
+2024.0,Kolkata Knight Riders,Mumbai Indians,Kolkata Knight Riders,1,"Wankhede Stadium, Mumbai",-1,0.6199934248266034,1,0.5076897579780254,1
+2024.0,Kolkata Knight Riders,Mumbai Indians,Kolkata Knight Riders,1,"Eden Gardens, Kolkata",1,0.6199934248266034,1,0.6665166061364237,1
+2024.0,Royal Challengers Bengaluru,Chennai Super Kings,Royal Challengers Bengaluru,1,"M Chinnaswamy Stadium, Bengaluru",1,0.48941665222597547,0,0.540681247593442,1
+2025.0,Kolkata Knight Riders,Royal Challengers Bengaluru,Royal Challengers Bengaluru,0,"Eden Gardens, Kolkata",1,0.5810891866703279,1,0.6289582606385684,1
+2025.0,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,0,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.40906796117639016,0,0.30221681441720327,0
+2025.0,Royal Challengers Bengaluru,Chennai Super Kings,Royal Challengers Bengaluru,1,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.402816884532255,0,0.29535964026256467,0
+2025.0,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.5747661978951292,1,0.45842365940576013,0
+2025.0,Royal Challengers Bengaluru,Mumbai Indians,Royal Challengers Bengaluru,1,"Wankhede Stadium, Mumbai",-1,0.5113744289680286,1,0.39435531417974884,0
+2025.0,Chennai Super Kings,Kolkata Knight Riders,Kolkata Knight Riders,0,"MA Chidambaram Stadium, Chepauk, Chennai",1,0.5697370039019268,1,0.6168575376389983,1
+2025.0,Chennai Super Kings,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.6249646622030708,1,0.5110335924152992,1
+2025.0,Royal Challengers Bengaluru,Chennai Super Kings,Royal Challengers Bengaluru,1,"M Chinnaswamy Stadium, Bengaluru",1,0.402816884532255,0,0.44824026743774753,0
+2025.0,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,0,"Eden Gardens, Kolkata",1,0.46557378723757337,0,0.5136385228978513,1
+2026.0,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,0,"Wankhede Stadium, Mumbai",-1,0.5723324891360714,1,0.45888587860939667,0
+2026.0,Royal Challengers Bengaluru,Chennai Super Kings,Royal Challengers Bengaluru,1,"M Chinnaswamy Stadium, Bengaluru",1,0.4121132418473512,0,0.4558886883945277,0
+2026.0,Royal Challengers Bengaluru,Mumbai Indians,Royal Challengers Bengaluru,1,"Wankhede Stadium, Mumbai",-1,0.5077865153330088,1,0.391922721646605,0
+2026.0,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,1,"MA Chidambaram Stadium, Chepauk, Chennai",1,0.5591876532852801,1,0.6066602975118869,1
+2026.0,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,1,"Wankhede Stadium, Mumbai",-1,0.6124950697101256,1,0.5007668232605547,1
+2026.0,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,0,"MA Chidambaram Stadium, Chepauk, Chennai",-1,0.42190521101215145,0,0.3109483300947963,0
+2026.0,Mumbai Indians,Royal Challengers Bengaluru,Royal Challengers Bengaluru,0,"Shaheed Veer Narayan Singh International Stadium, Raipur",0,0.5278976367337197,1,0.49436782572140225,0
+2026.0,Kolkata Knight Riders,Royal Challengers Bengaluru,Royal Challengers Bengaluru,0,"Shaheed Veer Narayan Singh International Stadium, Raipur",0,0.5821615321019736,1,0.5520489608818052,1
+2026.0,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,0,"Eden Gardens, Kolkata",-1,0.4629383734782228,0,0.3480110107081905,0
